@@ -42,7 +42,7 @@ describe('tokenize', () => {
   })
 
   it('should tokenize a=\n1,b=2', () => {
-    const tokenized = new TokenizeFeatures('a\t=1,b=2')
+    const tokenized = new TokenizeFeatures('a=\n1,b=2')
 
     expect(tokenized.get('a')).toEqual('1')
     expect(tokenized.isSet('a')).toEqual(true)
